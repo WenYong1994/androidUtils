@@ -1,0 +1,53 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    //百分比布局
+    compile 'com.android.support:percent:24.2.1'
+    //网络通讯
+    compile 'com.squareup.okhttp3:okhttp:3.5.0'
+    compile 'com.squareup.okio:okio:1.11.0'
+    compile 'com.android.support:design:24.2.1'
+    //图片加载
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //日志
+    compile 'com.orhanobut:logger:1.15'
+    //分割线
+    compile 'com.chanven.lib:cptr:1.1.0'
+    compile 'com.yqritc:recyclerview-flexibledivider:1.2.9'
+    //view注解
+    compile 'com.jakewharton:butterknife:8.4.0'
+    compile 'com.jakewharton:butterknife-compiler:8.4.0'
+    //它是一款针对Android的发布/订阅事件总线。它能够让我们很轻松的实现在Android的各个组件以及线程之间进行传递消息。
+    // 并且将事件的发送者与接收者之间进行解耦。而且他还是轻量级的Android类库
+    compile 'org.greenrobot:eventbus:3.0.0'
+    //retrofit+rxjava
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile 'io.reactivex:rxjava:1.2.1'
+    compile 'io.reactivex:rxandroid:1.2.1'
+    //数据库
+    compile 'com.github.satyan:sugar:1.5'
+    compile 'com.google.android.gms:play-services-appindexing:8.4.0'
+    compile 'com.alibaba:fastjson:1.2.23'
+}
